@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "text": "Юля, я тебя люблю",
+      "text": "Вопросики, вопросики",
       "allAnswers": [
         "ANSWER",
         "falled",
@@ -36,7 +36,7 @@
     {
       "id": 4,
       "text": "Магазин игрушек для детей",
-      "incorrectAnswers": [
+      "allAnswers": [
         "falled",
         "falled2",
         "falled3",
@@ -47,37 +47,67 @@
     {
       "id": 5,
       "text": "Магазин игрушек для детей",
-      "allAnswers": ["ANSWER","falled","falled2","falled3"],
+      "allAnswers": [
+        "ANSWER",
+        "falled",
+        "falled2",
+        "falled3"
+      ],
       "rightAnswer": "ANSWER"
     },
     {
       "id": 6,
       "text": "Магазин игрушек для детей",
-      "allAnswers": ["falled","ANSWER","falled2","falled3"],
+      "allAnswers": [
+        "falled",
+        "ANSWER",
+        "falled2",
+        "falled3"
+      ],
       "rightAnswer": "ANSWER"
     },
     {
       "id": 7,
       "text": "Магазин игрушек для детей",
-      "allAnswers": ["falled","falled2","ANSWER","falled3"],
+      "allAnswers": [
+        "falled",
+        "falled2",
+        "ANSWER",
+        "falled3"
+      ],
       "rightAnswer": "ANSWER"
     },
     {
       "id": 8,
       "text": "Магазин игрушек для детей",
-      "allAnswers": ["falled","falled2","falled3","ANSWER"],
+      "allAnswers": [
+        "falled",
+        "falled2",
+        "falled3",
+        "ANSWER"
+      ],
       "rightAnswer": "ANSWER"
     },
     {
       "id": 9,
       "text": "Магазин игрушек для детей",
-      "allAnswers": ["ANSWER","falled","falled2","falled3"],
+      "allAnswers": [
+        "ANSWER",
+        "falled",
+        "falled2",
+        "falled3"
+      ],
       "rightAnswer": "ANSWER"
     },
     {
       "id": 10,
       "text": "Магазин игрушек для детей",
-      "allAnswers": ["falled","ANSWER","falled2","falled3"],
+      "allAnswers": [
+        "falled",
+        "ANSWER",
+        "falled2",
+        "falled3"
+      ],
       "rightAnswer": "ANSWER"
     }
   ]

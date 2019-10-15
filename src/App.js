@@ -1,20 +1,24 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.css';
 import Question from './components/questionComponent';
-import { nextQuestion } from './redux/test-reducer';
+import { nextQuestion, nextQuestionStep, setPoint } from './redux/test-reducer';
 import * as reactRedux from 'react-redux';
-import { requestQuestionsSort } from './reselect/questions-selector';
+import { requestQuestions } from './reselect/questions-selector';
 
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.nextQuestion()
+    if (this.props.counter === 1) {
+      this.props.nextQuestion(this.props.counter)
+    }
   }
-  debugger
+
   render() {
+    console.log(this.props.counter)
     return (
       <div className="App">
-        { this.props.data && <Question {...this.props} />}
+        { this.props.data && <Question
+         {...this.props} />}
         { !this.props.data && <div>
           Загрузка...
         </div>}
@@ -25,13 +29,17 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    data: requestQuestionsSort(state),
-    isLoading: state.test.isLoading
+    data: requestQuestions(state),
+    isLoading: state.test.isLoading,
+    counter: state.test.counter,
+    totalPoints: state.test.totalPoints
   }
 }
 
 const mapDispatchToProps = {
-  nextQuestion
+  nextQuestion,
+  nextQuestionStep,
+  setPoint
 }
 
 export default reactRedux.connect(mapStateToProps, mapDispatchToProps)(App);
