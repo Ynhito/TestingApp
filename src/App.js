@@ -25,11 +25,11 @@ class App extends React.Component {
           <h1>Вы набрали {this.props.totalPoints.length} балов</h1>
           <p>Правильных {this.props.totalPoints.length}</p>
           <p>Неправильных {questionsCount - this.props.totalPoints.length}</p>
-          <div className={s.headTable}>
+          {this.props.failedAnswers.length > 0 && <div className={s.headTable}>
             <p>Номер вопроса</p>
             <p>Ваш ответ</p>
             <p>Правильный ответ</p>
-          </div>
+          </div>}
           {this.props.failedAnswers.length > 0 && this.props.failedAnswers.map((e, index) => {
             return (
               <div className={s.failedQue} key={index}>
