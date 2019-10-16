@@ -3,3 +3,28 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.answer {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #20B2AA;
+    cursor: pointer;
+    padding: 7px;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: #20B2AA;
+        color: #fff;
+        transform: scale(1.5);
+    }
+    &:active {
+        background-color: #fff;
+        color: #000;
+        border: 2px solid #20B2AA;
+    }
+}
+
+.target {
+    background-color: #20B2AA;
+    color: #fff;
+}
