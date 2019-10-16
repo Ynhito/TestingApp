@@ -4,12 +4,14 @@ const SET_QUESTION = 'SET_QUESTION';
 const QUESTION_IS_LOADING = 'QUESTION_IS_LOADING';
 const NEXT_QUESTION = 'NEXT_QUESTION';
 const SET_POINT = 'SET_POINT';
+const SET_FAILED_ANSWER = 'SET_FAILED_ANSWER';
 
 let initialState = {
   question: null,
   isLoading: false,
   counter: 1,
-  totalPoints: []
+  totalPoints: [],
+  failedAnswers: []
 }
 
 const testReducer = (state = initialState, action) => {
@@ -34,6 +36,11 @@ const testReducer = (state = initialState, action) => {
         ...state,
         totalPoints: [...state.totalPoints, action.point]
       }
+    case SET_FAILED_ANSWER:
+      return {
+        ...state,
+        failedAnswers: [...state.failedAnswers, action.payload]
+      }
     default:
       return state
   }
@@ -52,7 +59,6 @@ export const questionIsLoading = (payload) => {
     payload
   }
 }
-
 export const nextQuestionStep = () => {
   return {
     type: NEXT_QUESTION,
@@ -63,6 +69,12 @@ export const setPoint = (point) => {
   return {
     type: SET_POINT,
     point
+  }
+}
+export const setFailedAnswer = (payload) => {
+  return {
+    type: SET_FAILED_ANSWER,
+    payload
   }
 }
 

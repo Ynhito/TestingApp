@@ -30,7 +30,15 @@ const Question = (props) => {
     if (answer && answer === props.data.rightAnswer) {
       props.setPoint(1)
     }
-    props.nextQuestion(props.counter);
+    if (!answer || (answer !== props.data.rightAnswer)) {
+      const failedAnswer = {
+        failed: answer,
+        right: props.data.rightAnswer,
+        id: props.data.id
+      }
+      props.setFailedAnswer(failedAnswer)
+    }
+    props.counter === 11 ? props.nextQuestionStep() : props.nextQuestion(props.counter);
   }
   return (
     <Card >

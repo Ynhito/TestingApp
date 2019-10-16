@@ -3,5 +3,5 @@
 export const questionsCount = 10;
 
 // set the number of counter engine
-// установить число для движка тестера, кол-вл вопросов + 1
-export const numberEngine = 11;
+// установить число для движка тестера, кол-во вопросов + 2
+export const numberEngine = 12;
